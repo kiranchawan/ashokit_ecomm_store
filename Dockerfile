@@ -12,6 +12,7 @@ RUN npm run build --prod
 
 FROM nginx:alpine
 
-COPY --from=build /app/dist/ashokit_ecomm_store /usr/share/nginx/html
+COPY --from=build /app/dist/ecommerce_frontend /usr/share/nginx/html
+
 
 EXPOSE 80
